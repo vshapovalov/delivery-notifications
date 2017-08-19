@@ -356,6 +356,9 @@ begin
   FRetryTimer.Enabled := true;
   FRetryTimer.OnTimer := retryTimerHandler;
 
+  if not (DirectoryExists( IncludeTrailingBackslash( ExtractFilePath(ParamStr(0))) + 'logs')) then
+    CreateDir(DirectoryExists( IncludeTrailingBackslash( ExtractFilePath(ParamStr(0))) + 'logs'));
+
   FIsStopped := False;
   FNeedSendMessage := False;
   FNeedSendOrders := False;
