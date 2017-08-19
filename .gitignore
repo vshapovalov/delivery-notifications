@@ -27,6 +27,7 @@
 #
 
 # Delphi compiler-generated binaries (safe to delete)
+
 *.exe
 *.dll
 *.bpl
@@ -64,3 +65,6 @@ __recovery/
 
 # Castalia statistics file (since XE7 Castalia is distributed with Delphi)
 *.stat
+
+#temporary files
+./logs/*.txt
